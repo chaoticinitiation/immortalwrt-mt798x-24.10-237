@@ -220,6 +220,7 @@ platform_do_upgrade() {
 	Airpi |\
 	huasifei,wh3000-emmc |\
 	cmcc,rax3000m-emmc |\
+	philips,hy3000 |\
 	cmcc,xr30-emmc |\
 	*sl,3000* |\
         *sl,3000-emmc* |\
@@ -264,6 +265,7 @@ platform_check_image() {
 	*e-life,etr631-t* |\
         *e-life,etr635-u* |\
         cmcc,rax3000me |\
+        philips,hy3000 |\
         cmcc,xr30 |\
         *kst,wf3000a* |\
         *newland,nl-wr8103* |\
