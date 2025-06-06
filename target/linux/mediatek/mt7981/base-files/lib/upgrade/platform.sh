@@ -208,6 +208,7 @@ platform_do_upgrade() {
 	*newland,nl-wr8103* |\
 	*newland,nl-wr9103* |\
 	*jcg,q30* |\
+	*kj,kj30-n* |\
 	nradio,wt9103 |\
 	cmcc,a10 |\
 	cmcc,rax3000m |\
@@ -273,6 +274,7 @@ platform_check_image() {
 	*sl,3000* |\
         *sl,3000-emmc* |\
 	*jcg,q30* |\
+	*kj,kj30-n* |\
 	cmcc,a10 |\
 	cmcc,rax3000m* |\
 	h3c,nx30pro |\

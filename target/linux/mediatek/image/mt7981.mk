@@ -405,6 +405,23 @@ define Device/jcg_q30
 endef
 TARGET_DEVICES += jcg_q30
 
+define Device/kj_kj30-n
+  DEVICE_VENDOR := KJ
+  DEVICE_MODEL := KJ30-N
+  DEVICE_DTS := mt7981-kj-kj30-n
+  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+  SUPPORTED_DEVICES := kj,kj30-n
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  KERNEL_IN_UBI := 1
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += kj_kj30-n
+
 define Device/livinet_zr-3020
   DEVICE_VENDOR := Livinet
   DEVICE_MODEL := ZR-3020
