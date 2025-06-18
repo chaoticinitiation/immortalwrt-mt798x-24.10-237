@@ -56,6 +56,7 @@ konka,komi-a31)
         ucidef_set_led_netdev "blue" "BLUE" "blue:status" "wan" "link"
 	;;
 kj,kj30-n)
+	ucidef_set_led_default "power" "POWER" "blue:status" "1"
         ucidef_set_led_netdev "wan" "WAN" "blue:wan" "wan" "link"
 	;;
 nradio,wt9103)
