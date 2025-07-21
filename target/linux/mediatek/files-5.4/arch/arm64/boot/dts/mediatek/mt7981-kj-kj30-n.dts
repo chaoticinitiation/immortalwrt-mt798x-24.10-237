@@ -32,7 +32,7 @@
                 };
 
                 lan_yellow_led: led-1 {
-                        label = "yellow:lan";
+                        label = "yellow:wan";
                         gpios = <&pio 13 GPIO_ACTIVE_LOW>;
                 };
 
