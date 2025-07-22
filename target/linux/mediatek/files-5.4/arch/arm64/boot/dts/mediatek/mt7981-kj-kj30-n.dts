@@ -31,7 +31,7 @@
                         gpios = <&pio 8 GPIO_ACTIVE_LOW>;
                 };
 
-                lan_yellow_led: led-1 {
+                wan_yellow_led: led-1 {
                         label = "yellow:wan";
                         gpios = <&pio 13 GPIO_ACTIVE_LOW>;
                 };
