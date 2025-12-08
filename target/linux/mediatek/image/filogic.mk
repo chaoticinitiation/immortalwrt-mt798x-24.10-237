@@ -1219,8 +1219,7 @@ define Device/kj_kj30-n
   DEVICE_VENDOR := KJ
   DEVICE_MODEL := KJ30-N
   DEVICE_DTS := mt7981b-kj-kj30-n
-  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
-  SUPPORTED_DEVICES := kj,kj30-n
+  DEVICE_DTS_DIR := ../dts
   UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
   PAGESIZE := 2048
