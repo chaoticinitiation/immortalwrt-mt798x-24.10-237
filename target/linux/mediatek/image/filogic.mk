@@ -1215,6 +1215,23 @@ define Device/imou_lc-hx3001
 endef
 TARGET_DEVICES += imou_lc-hx3001
 
+define Device/kj_kj30-n
+  DEVICE_VENDOR := KJ
+  DEVICE_MODEL := KJ30-N
+  DEVICE_DTS := mt7981b-kj-kj30-n
+  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+  SUPPORTED_DEVICES := kj,kj30-n
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  KERNEL_IN_UBI := 1
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += kj_kj30-n
+
 define Device/jcg_q30-pro
   DEVICE_VENDOR := JCG
   DEVICE_MODEL := Q30 PRO

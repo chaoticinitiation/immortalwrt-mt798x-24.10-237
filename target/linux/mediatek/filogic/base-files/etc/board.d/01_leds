@@ -66,6 +66,10 @@ nokia,ea0326gmp)
 	ucidef_set_led_netdev "lan" "LAN" "green:lan" "br-lan" "link"
 	ucidef_set_led_netdev "wlan" "WLAN" "green:wlan" "phy1-ap0" "link"
 	;;
+kj,kj30-n)
+	ucidef_set_led_default "power" "POWER" "blue:status" "1"
+    ucidef_set_led_netdev "wan" "WAN" "blue:wan" "wan" "link"
+	;;
 livinet,zr-3020|\
 livinet,zr-3020-ubootmod)
 	ucidef_set_led_netdev "internet" "INTERNET" "blue:internet" "wan"

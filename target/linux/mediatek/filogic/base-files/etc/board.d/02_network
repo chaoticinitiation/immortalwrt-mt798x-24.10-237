@@ -55,6 +55,7 @@ mediatek_setup_interfaces()
 	livinet,zr-3020-ubootmod|\
 	qihoo,360t7|\
 	*philips,hy3000*|\
+	*kj,kj30-n*|\
 	sl,3000-emmc|\
 	routerich,ax3000|\
 	routerich,ax3000-ubootmod)
@@ -240,6 +241,11 @@ mediatek_setup_macs()
  		wan_mac=$(macaddr_add "$lan_mac" -2)
  		label_mac=$lan_mac
  		;;
+	kj,kj30-n)
+		lan_mac=$(mtd_get_mac_binary Factory 0x2A)
+		wan_mac=$(mtd_get_mac_binary Factory 0x24)
+		label_mac=$wan_mac
+		;;
 	philips,hy3000)
 		lan_mac=$(mmc_get_mac_binary factory 0x74)
 		wan_mac=$(macaddr factory $lan_mac 1)

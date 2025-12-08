@@ -93,6 +93,7 @@ platform_do_upgrade() {
 	cudy,tr3000-v1-ubootmod|\
 	gatonetworks,gdsp|\
 	imou,lc-hx3001|\
+	kj,kj30-n|\
 	konka,komi-a31|\
 	livinet,zr-3020-ubootmod|\
 	mediatek,7981r128|\
