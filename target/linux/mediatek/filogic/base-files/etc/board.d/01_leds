@@ -18,6 +18,10 @@ bt,r320)
 	ucidef_set_led_netdev "wlan2g" "2.4G" "green:wlan-2ghz" "ra0"
 	ucidef_set_led_netdev "wlan5g" "5G" "green:wlan-5ghz" "rax0"
 	;;
+philips,hy3000)
+	ucidef_set_led_default "red" "RED" "red:status" "1"
+	ucidef_set_led_netdev "blue" "BLUE" "blue:status" "eth1" "link"
+	;;
 abt,asr3000)
 	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth1"
 	ucidef_set_led_netdev "wlan2g" "WLAN2G" "green:wlan-2ghz" "phy0-ap0"
