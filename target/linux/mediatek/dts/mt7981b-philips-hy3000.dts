@@ -11,14 +11,14 @@
 #include "mt7981.dtsi"
 
 / {
-	model = "Philips-hy3000";
+	model = "PHILIPS HY3000";
 	compatible = "philips,hy3000", "mediatek,mt7981";
 
 	aliases {
 		led-boot = &status_red_led;
-		led-failsafe = &status_red_led;
-		led-running = &status_green_led;
-		led-upgrade = &status_red_led;
+		led-failsafe = &status_blue_led;
+		led-running = &status_blue_led;
+		led-upgrade = &status_blue_led;
 		serial0 = &uart0;
 	};
 
@@ -56,8 +56,8 @@
 			gpios = <&pio 8 GPIO_ACTIVE_HIGH>;
 			};
 
-		status_green_led: led-1 {
-			label = "green:status";
+		status_blue_led: led-1 {
+			label = "blue:status";
 			gpios = <&pio 13 GPIO_ACTIVE_LOW>;
 		};
 	};
