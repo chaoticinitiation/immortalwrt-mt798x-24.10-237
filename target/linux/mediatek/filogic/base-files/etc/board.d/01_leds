@@ -20,7 +20,7 @@ bt,r320)
 	;;
 philips,hy3000)
 	ucidef_set_led_default "red" "RED" "red:status" "1"
-	ucidef_set_led_netdev "blue" "BLUE" "blue:status" "eth1" "link"
+	ucidef_set_led_netdev "blue" "BLUE" "blue:status" "wan" "link"
 	;;
 abt,asr3000)
 	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth1"

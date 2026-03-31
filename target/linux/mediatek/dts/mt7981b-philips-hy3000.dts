@@ -53,7 +53,7 @@
 
 		status_red_led: led-0 {
 			label = "red:status";
-			gpios = <&pio 8 GPIO_ACTIVE_HIGH>;
+			gpios = <&pio 8 GPIO_ACTIVE_LOW>;
 			};
 
 		status_blue_led: led-1 {
