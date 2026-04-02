@@ -614,7 +614,8 @@ define Device/philips_hy3000
   DEVICE_MODEL := HY3000
   DEVICE_DTS := mt7981b-philips-hy3000
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  DEVICE_PACKAGES := kmod-usb3 f2fsck losetup mkf2fs kmod-fs-f2fs kmod-mmc \
+    luci-app-samba4
   SUPPORTED_DEVICES += philips,hy3000
   KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
   KERNEL_INITRAMFS := kernel-bin | lzma | \
