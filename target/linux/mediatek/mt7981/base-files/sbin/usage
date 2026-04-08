@@ -1,0 +1,24 @@
+#!/bin/sh
+
+NSS_PATH="/sys/kernel/debug/qca-nss-drv/stats"
+PPE_PATH="/sys/kernel/debug/hnat"
+
+cpu_usage="$(busybox top -n1 | awk '/^CPU/ {printf("%d%", 100 - $8)}')"
+
+[ ! -d "$NSS_PATH" ] || \
+npu_usage="$(grep '%' "$NSS_PATH"/cpu_load_ubi | awk -F ' ' '{print $2}')"
+
+if [ -d "$PPE_PATH" ]; then
+ppe0_usage=0
+ppe1_usage=0
+ppe0_usage="$(grep -n 'BIND_PPE0' "$PPE_PATH"/hnat_stats | awk -F '=' '{print $2}')"
+ppe1_usage="$(grep -n 'BIND_PPE1' "$PPE_PATH"/hnat_stats | awk -F '=' '{print $2}')"
+fi
+
+if [ -d "$NSS_PATH" ]; then
+	echo -n "CPU: ${cpu_usage}, NPU: ${npu_usage}"
+elif [ -d "$PPE_PATH" ]; then
+ echo "CPU: ${cpu_usage}, PPE0: ${ppe0_usage}  PPE1: ${ppe1_usage}"
+else
+	echo -n "CPU: ${cpu_usage}"
+fi
