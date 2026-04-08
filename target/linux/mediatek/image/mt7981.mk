@@ -493,7 +493,7 @@ define Device/philips_hy3000
   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
   SUPPORTED_DEVICES := philips,hy3000
   DEVICE_PACKAGES := f2fsck losetup mkf2fs kmod-fs-f2fs kmod-mmc \
-	luci-app-samba4
+	luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += philips_hy3000
